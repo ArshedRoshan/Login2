@@ -1,0 +1,26 @@
+
+<h1>Home page</h1>
+
+<table class="table" border="1px" style="width: 500px;" >
+
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      
+    </tr>
+  </thead>
+  {% for x in list1 %}
+  <tbody>
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{x.first}}</td>
+      <td>{{x.last}}</td>
+      
+    </tr>
+
+  </tbody>
+  {% endfor %}
+</table>
+<a href="{% url 'logout' %}">Logout</a> 
